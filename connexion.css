@@ -1,0 +1,64 @@
+/* Section de connexion */
+.connexion {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.connexion .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.connexion h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.connexion p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.connexion .form-group {
+    margin-bottom: 20px;
+}
+
+.connexion label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.connexion .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.connexion .form-control:focus {
+    border-color: #005a8d;
+    outline: none;
+}
+
+.connexion .btn-primary {
+    background-color: #005a8d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.connexion .btn-primary:hover {
+    background-color: #003f64;
+}

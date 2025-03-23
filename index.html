@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plateforme du Collège Saint Cyprien pour une communication efficace entre élèves, parents, professeurs et administration."
+    />
+    <title>Collège Saint Cyprien</title>
+    <link rel="stylesheet" href="home.css" />
+    <!-- logoç -->
+    <link rel="shortcut icon " href="img/images.png" />
+    <!-- <script src="index.js"></script> -->
+  </head>
+
+  <body>
+    <!-- En-tête principal -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/images.png" alt="Logo Collège Saint Cyprien" />
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Accueil</a></li>
+            <li><a href="connexion.html" class="nav-link">Connexion</a></li>
+            <li><a href="etudiants.html" class="nav-link">Étudiants</a></li>
+            <li><a href="parents.html" class="nav-link">Parents</a></li>
+            <li><a href="enseignants.html" class="nav-link">Enseignants</a></li>
+            <li>
+              <a href="administration.html" class="nav-link">Administration</a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section d'accueil -->
+    <main id="home" class="homepage">
+      <section class="hero">
+        <div class="container">
+          <h1>Bienvenue sur la plateforme Collège Saint Cyprien</h1>
+          <p>
+            Une plateforme dédiée à connecter étudiants, parents, enseignants et
+            administration pour une éducation moderne et collaborative.
+          </p>
+          <a href="connexion.html" class="btn btn-primary">Se connecter</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2024 College Saint Cyprien. Tous droits réservés.</p>
+        <img src="img/google_480px.png" width="20px" alt=" logo google  " />
+        <br />
+        <p>
+          Email :
+          <a href="mailto:contact@grande-ecole-saint-cyprien.com"
+            >contact@grande-ecole-saint-cyprien.com</a
+          >
+        </p>
+        <p>Téléphone : +123 456 789</p>
+      </div>
+    </footer>
+
+    <script>
+      // Attendre que le DOM soit complètement chargé avant d'exécuter le script
+      document.addEventListener("DOMContentLoaded", () => {
+        // 🎨 ANIMATION DES LIENS DE NAVIGATION 🎨
+        const navLinks = document.querySelectorAll(".main-nav a");
+
+        navLinks.forEach((link) => {
+          // Animation au survol (agrandissement du lien)
+          link.addEventListener("mouseenter", () => {
+            gsap.to(link, { scale: 1.1, duration: 0.2, ease: "power1.out" });
+          });
+
+          // Animation lorsque la souris quitte le lien (retour à la taille normale)
+          link.addEventListener("mouseleave", () => {
+            gsap.to(link, { scale: 1, duration: 0.2, ease: "power1.out" });
+          });
+        });
+
+        // ANIMATION DU BOUTON "SE CONNECTER"
+        const heroButton = document.querySelector(".hero .btn");
+
+        // Animation d'entrée (rebond du bouton à l'affichage)
+        gsap.from(heroButton, {
+          scale: 0.8, // Taille réduite au début
+          opacity: 0, // Invisible au début
+          duration: 1, // Durée de l'animation
+          ease: "elastic.out(1, 0.5)", // Effet de rebond
+        });
+
+        // Effet de zoom au survol du bouton
+        heroButton.addEventListener("mouseenter", () => {
+          gsap.to(heroButton, {
+            scale: 1.2,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        });
+
+        // Retour à la taille normale quand la souris quitte le bouton
+        heroButton.addEventListener("mouseleave", () => {
+          gsap.to(heroButton, { scale: 1, duration: 0.3, ease: "power1.out" });
+        });
+
+        // Animation du bouton lorsqu'on clique dessus
+        heroButton.addEventListener("click", (event) => {
+          event.preventDefault(); // Empêche le comportement par défaut du lien
+
+          ap.to(heroButton, {
+            scale: 0.9, // Légère réduction pour effet de clic
+            duration: 0.2,
+            ease: "power1.inOut",
+            onComplete: () => {
+              // Après l'animation, rediriger vers la page de connexion
+              alert("Redirection vers la page de connexion...");
+              window.location.href = "connexion.html";
+            },
+          });
+        });
+
+        //  ANIMATION D'APPARITION DU TEXTE D'ACCUEIL
+        gsap.from(".hero h1", {
+          y: -50, // Déplacement vers le haut
+          opacity: 0, // Invisible au début
+          duration: 1, // Durée de l'animation
+          ease: "power2.out", // Effet fluide
+        });
+
+        gsap.from(".hero p", {
+          y: 50, // Déplacement vers le bas
+          opacity: 0, // Invisible au début
+          duration: 1, // Durée de l'animation
+          delay: 0.3, // Délai après le titre
+          ease: "power2.out",
+        });
+      });
+    </script>
+  </body>
+</html>

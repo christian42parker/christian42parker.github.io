@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="enseignants.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans votre espace Enseignant</h1>
+    </header>
+    
+    <main>
+        
+        <!-
+    <!-- Section Gestion des Cours -->
+        <section class="section">
+            <h2>Gestion des Cours</h2>
+            <p>Dans cette section, vous pouvez gérer vos cours, ajouter des ressources pédagogiques, des vidéos ou des supports de cours pour les étudiants.</p>
+    
+            <div>
+                <h3>Ajouter un support de cours</h3>
+                <form action="#" method="post" enctype="multipart/form-data" class="assign-form">
+                    <label for="cours">Titre du support de cours :</label>
+                    <input type="text" id="cours" name="cours" required><br>
+    
+                    <label for="file">Télécharger le fichier (PDF, PPT, DOC) :</label>
+                    
+         
+    <input type="file" id="file" name="file" accept=".pdf,.ppt,.doc,.docx" required><br>
+    
+                    
+    
+        
+    <button type="submit">Ajouter le support de cours</button>
+                </form>
+            
+         
+    </div>
+        </section>
+    
+        <!-- Section Gestion des Devoirs -->
+        <section class="section devoirs">
+            <h2>Gestion des Devoirs</h2>
+            
+      
+    <p>Ici, vous pouvez consulter les devoirs soumis par les étudiants, les évaluer et ajouter des commentaires.</p>
+    
+            <ul>
+                <li>
+                    <strong>Devoir 1 : Mathématiques - Résolution des dérivées</strong><br>
+                    Élève : Jean Dupont | Note : 15/20<br>
+                    <a href="devoir1_soumis.pdf" class="btn">Voir le devoir soumis</a><br>
+                    <form action="#" method="post" class="feedback-form">
+                        <label for="commentaire1">Commentaires :</label><br>
+                        <textarea id="commentaire1" name="commentaire1" rows="4" placeholder="Ajouter des commentaires ou des remarques"></textarea><br>
+                        <label for="note1">Note :</label><br>
+                        <input type="number" id="note1" name="note1" min="0" max="20" value="15" required><br>
+                        <button type="submit">Envoyer les commentaires et la note</button>
+                    </form>
+                </li>
+    
+                <li>
+                    <strong>Devoir 2 : Français - Analyse littéraire</strong><br>
+                    Élève : Marie Martin | Note : 18/20
+                    Élève : M
+    <br>
+                    <a href="devoir2_soumis.pdf" class="btn">Voir le devoir soumis</a><br>
+                    <form action="#" method="post" class="feedback-form">
+                        <label for="commentaire2">Commentaires :</label><br>
+                        <textarea id="commentaire2" name="commentaire2" rows="4" placeholder="Ajouter des commentaires ou des remarques"></textarea><br>
+                        
+             
+    <label for="note2">Note :</label><br>
+                        <input type="number" id="note2" name="note2" min="0" max="20" value="18" required><br>
+                        <button type="submit">Envoyer les commentaires et la note</button>
+                    
+                    <
+    </form>
+                </li>
+            </ul>
+        </section>
+    
+        <!-- Section Communication avec les Élèves -->
+        <section class="section">
+            <h2>Communication avec les Élèves</h2>
+            <p>Envoyez des messages ou des notifications aux élèves concernant leurs résultats, leurs devoirs ou tout autre sujet important.</p>
+    
+            <div>
+                <h3>Envoyer un message aux élèves</h3>
+                <form action="#" method="post">
+                    
+               
+    <label for="message">Message :</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+    
+                    <label for="eleves">Choisir un élève :</label><br>
+                    <select id="eleves" name="eleves">
+                        <option value="jean">Jean Dupont</option>
+                        <option value="marie">Marie Martin</option>
+                        <option value="lucas">Lucas Lefevre</option>
+                    </select><br>
+    
+                    <button type="submit">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Grande École Saint Cyprien</p>
+    </footer>
+</body>
+</html>

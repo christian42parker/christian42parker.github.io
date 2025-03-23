@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="parents.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue, Parent d'Élève</h1>
+    </header>
+    
+    <main>
+        <!-- Section Suivi des Résultats -->
+        <section class="section">
+            <h2>Suivi des Résultats Scolaires</h2>
+            
+       
+    <p>Consultez les résultats académiques de votre enfant pour chaque matière.</p>
+            <ul>
+                <li><strong>Mathématiques : </strong> 15/20 - Professeur : Mme. Dupont</li>
+                <li><strong>Français : </strong> 18/20 - Professeur : M. Martin</li>
+                <li><strong>Histoire : </strong> 14/20 - Professeur : Mme. Lefevre</li>
+                <li><strong>Sciences : </strong> 17/20 - Professeur : M. Durand</li>
+            </ul>
+            <a href="resultats_complets.html" class="btn">Voir tous les résultats</a>
+        </section>
+    
+        <!-- Section Emploi du Temps -->
+        <section class="section">
+            <h2>Emploi du Temps de votre enfant</h2>
+            <p>Consultez l'emploi du temps de votre enfant pour suivre ses horaires de cours.</p>
+            <ul>
+                <li><strong>Lundi : </strong> 8h00 - 12h00 : Mathématiques | 13h00 - 16h00 : Français</li>
+                <li><strong>Mardi : </strong> 8h00 - 12h00 : Histoire | 13h00 - 16h00 : Sciences</li>
+                <li><strong>Mercredi : </strong> 8h00 - 12h00 : Anglais | 13h00 - 16h00 : Informatique</li>
+            </ul>
+            <a href="emploi_du_temps.pdf" class="btn">Télécharger l'emploi du temps</a>
+        </section>
+    
+        <!-- Section Communication avec l'Enseignant -->
+        <section class="section">
+            <h2>Contacter l'Enseignant</h2>
+            <p>Si vous avez des questions ou souhaitez discuter avec un enseignant, vous pouvez utiliser ce formulaire de contact.</p>
+            
+            <div class="contact-form">
+                <h3>Formulaire de contact</h3>
+                
+             
+    <form action="#" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required><br>
+    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required><br>
+    
+                    
+    
+    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+    
+                    <button type="submit">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+    
+        <!-- Section Communication avec l'Administration -->
+        <section class="section">
+            <h2>Contacter l'Administration</h2>
+            <p>Pour toute question administrative, vous pouvez aussi envoyer un message à l'administration de l'école.</p>
+            
+            <div class="contact-form">
+                <h3>Formulaire de contact - Administration</h3>
+                <form action="#" method="post">
+                    <label for="nom_admin">Nom :</label>
+                    <input type="text" id="nom_admin" name="nom_admin" required><br>
+    
+                    <label for="email_admin">Email :</label>
+                    <input type="email" id="email_admin" name="email_admin" required><br>
+    
+                    <label for="message_admin">Message :</label>
+                    <textarea id="message_admin" name="message_admin" rows="4" required></textarea><br>
+    
+                    <button type="submit">Envoyer le message à l'administration</button>
+                </form>
+            </div>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Grande École Saint Cyprien</p>
+    </footer>
+    
+</body>
+</html>

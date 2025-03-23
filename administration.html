@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="administration.css">
+</head>
+<body>
+    
+<header>
+    <h1>Bienvenue dans l'Espace Administration</h1>
+</header>
+
+<main>
+    <!-- Section Gestion des Utilisateurs -->
+    <section class="section">
+        <h2>Gestion des Utilisateurs</h2>
+        <p>Dans cette section, vous pouvez gérer les comptes des étudiants, enseignants et parents.</p>
+
+        <div>
+            <h3>Ajouter un Nouvel Utilisateur</h3>
+            <form action="#" method="post" class="admin-form">
+                <label for="role">Rôle :</label>
+                
+       
+<select id="role" name="role" required>
+                    <option value="etudiant">Étudiant</option>
+                    <option value="enseignant">Enseignant</option>
+                    <option value="parent">Parent</option>
+                
+             
+</select><br>
+
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="password" id="motdepasse" name="motdepasse" required><br>
+
+                <button type="submit">Ajouter l'utilisateur</button>
+            </form>
+        
+        </div
+</div>
+
+        <div>
+            <h3>Liste des Utilisateurs</h3>
+            <div class="list-item">
+                <p><strong>Jean Dupont</strong> - Rôle : Étudiant</p>
+                <button>Supprimer</button>
+            </div>
+            <div class="list-item">
+                
+           
+<p><strong>Marie Martin</strong> - Rôle : Enseignant</p>
+                <button>Supprimer</button>
+            </div>
+            
+      
+<div class="list-item">
+                <p><strong>Luc Lefevre</strong> - Rôle : Parent</p>
+                <button>Supprimer</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Gestion des Cours -->
+    <section class="section">
+        <h2>Gestion des Cours</h2>
+        <p>Dans cette section, vous pouvez gérer les cours, attribuer des enseignants et consulter les horaires.</p>
+
+        <div>
+            <h3>Ajouter un Cours</h3>
+            <form action="#" method="post" class="admin-form">
+                <label for="cours">Nom du Cours :</label>
+                <input type="text" id="cours" name="cours" required><br>
+
+                <label for="enseignant">Choisir un Enseignant :</label>
+                <select id="enseignant" name="enseignant" required>
+                    <option value="enseignant1">Mme. Dupont</option>
+                    <option value="enseignant2">M. Lefevre</option>
+                </select><br>
+
+                <button type="submit">Ajouter le Cours</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Liste des Cours</h3>
+            <div class="list-item">
+                <p><strong>Mathématiques</strong> - Enseignant : Mme. Dupont</p>
+                <button>Supprimer</button>
+            
+      
+</div>
+            <div class="list-item">
+                <p><strong>Français</strong> - Enseignant : M. Lefevre</p>
+                <button>Supprimer</button>
+            
+      
+</div>
+        </div>
+    </section>
+
+    <!-- Section Gestion des Résultats -->
+    <section class="section">
+        <h2>Gestion des Résultats</h2>
+        <p>Consultez et gérez les résultats académiques des étudiants. Vous pouvez également ajouter des commentaires généraux.</p>
+
+        <div>
+            <h3>Ajouter une Note pour un Étudiant</h3>
+            <form action="#" method="post" class="admin-form">
+                <label for="etudiant">Choisir un Étudiant :</label>
+                <select id="etudiant" name="etudiant" required>
+                    <option value="jean">Jean Dupont</option>
+                    <option value="marie">Marie Martin</option>
+                </select><br>
+
+                <label for="cours_resultat">Nom du Cours :</label>
+                <input type="text" id="cours_resultat" name="cours_resultat" required><br>
+
+                <label for="note">Note :</label>
+                <input type="number" id="note" name="note" min="0" max="20" required><br>
+
+                <label for="commentaire">Commentaires :</label>
+                
+   
+<textarea id="commentaire" name="commentaire" rows="4"></textarea><br>
+
+                <button type="submit">Ajouter la Note</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Liste des Résultats</h3>
+            <div class="list-item">
+                <p><strong>Jean Dupont</strong> - Mathématiques : 15/20</p>
+                <button>Modifier</button>
+            </div>
+            
+         
+<div class="list-item">
+                <p><strong>Marie Martin</strong> - Français : 18/20</p>
+                <button>Modifier</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Gestion des Absences -->
+    <section class="section">
+        <h2>Gestion des Absences</h2>
+        <p>Consultez et gérez les absences des étudiants. Vous pouvez aussi ajouter des commentaires sur chaque absence.</p>
+
+        <div>
+            <h3>Ajouter une Absence</h3>
+            <form action="#" method="post" class="admin-form">
+                <label for="etudiant_absence">Choisir un Étudiant :</label>
+                <select id="etudiant_absence" name="etudiant_absence" required>
+                    <option value="jean">Jean Dupont</option>
+                    <option value="marie">Marie Martin</option>
+                </select><br>
+
+                <label for="cours_absence">Nom du Cours :</label>
+                <input type="text" id="cours_absence" name="cours_absence" required><br>
+
+                <label for="date_absence">Date de l'Absence :</label>
+                <input type="date" id="date_absence" name="date_absence" required><br>
+
+                <label for="commentaire_absence">Commentaire :</label>
+                <textarea id="commentaire_absence" name="commentaire_absence" rows="4"></textarea><br>
+
+                <button type="submit">Enregistrer l'Absence</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Liste des Absences</h3>
+            <div class="list-item">
+                <p><strong>Jean Dupont</strong> - Absence : 10/12/2024 - Cours : Mathématiques</p>
+                <button>Modifier</button>
+            </div>
+            <div class="list-item">
+                <p><strong>Marie Martin</strong> - Absence : 11/12/2024 - Cours : Français</p>
+                
+                
+<button>Modifier</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Grande École Saint Cyprien</p>
+
+</footer
+
+</body>
+</html>
